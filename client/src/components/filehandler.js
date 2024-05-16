@@ -47,7 +47,7 @@ const FileUploadComponent = () => {
               {uploading ? "Uploading..." : "Upload"}
             </button>
           </div>
-          {fileDetails && (
+          {/* {fileDetails && (
             <div>
               <h2 className="text-xl font-semibold mb-2">File Details</h2>
               <p>Name: {fileDetails.file_name}</p>
@@ -59,7 +59,7 @@ const FileUploadComponent = () => {
               </a>
               <p>Type: {fileDetails.file_mimetype}</p>
             </div>
-          )}
+          )} */}
           {descriptions.length > 0 && (
             <div className="bg-gray-200 p-4 mt-4">
               <h2 className="text-2xl font-bold">Descriptions (Video)</h2>

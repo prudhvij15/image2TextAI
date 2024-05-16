@@ -1,5 +1,4 @@
 import axios from "axios";
-
 const handleUpload = async (
   selectedFile,
   setUploading,
@@ -22,12 +21,11 @@ const handleUpload = async (
         },
       }
     );
+
     console.log(response);
-    const fileData = response.data.file_info;
-    setFileDetails(fileData);
 
     // Check if the uploaded file is a video
-    if (fileData.file_mimetype.startsWith("video")) {
+    if (selectedFile.type.startsWith("video")) {
       setDescriptions(response.data.openAIResponse);
     } else {
       setDescription(response.data.openAIResponse);
